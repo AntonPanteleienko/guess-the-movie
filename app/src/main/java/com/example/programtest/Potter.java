@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class Potter extends AppCompatActivity {
-    Button answer1, answer2, answer3, answer4,Next;
+    Button answer1, answer2, answer3, answer4, Next, Out;
     TextView yes, No;
 
     @Override
@@ -23,6 +23,7 @@ public class Potter extends AppCompatActivity {
         answer3 = findViewById(R.id.answer3);
         answer4 = findViewById(R.id.answer4);
         Next = findViewById(R.id.Next);
+        Out = findViewById(R.id.Out);
 
         yes = findViewById(R.id.yes);
         No = findViewById(R.id.No);
@@ -81,5 +82,14 @@ public class Potter extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), Djumandj.class));
             }
         });
+
+        Out.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), Menu.class));
+            }
+        });
+
+
     }
 }

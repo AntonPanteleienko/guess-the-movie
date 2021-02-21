@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 public class Forest extends AppCompatActivity {
 
-    Button answer1, answer2, answer3, answer4, Next;
+    Button answer1, answer2, answer3, answer4, Next,Out;
     TextView yes, No;
 
     @Override
@@ -25,6 +25,7 @@ public class Forest extends AppCompatActivity {
         answer3 = findViewById(R.id.answer3);
         answer4 = findViewById(R.id.answer4);
         Next = findViewById(R.id.Next);
+        Out = findViewById(R.id.Out);
 
         yes = findViewById(R.id.yes);
         No = findViewById(R.id.No);
@@ -81,6 +82,13 @@ public class Forest extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), Potter.class));
+            }
+        });
+
+        Out.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), Menu.class));
             }
         });
     }
