@@ -64,7 +64,7 @@ public class Login extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(Login.this, "Добро пожаловать", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            startActivity(new Intent(getApplicationContext(), Menu.class));
                         } else {
                             Toast.makeText(Login.this, "Ошибка " + task.getException().getMessage() , Toast.LENGTH_SHORT).show();
                         }
@@ -77,7 +77,7 @@ public class Login extends AppCompatActivity {
         createText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), Menu.class));
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
             }
         });
     }

@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         if (fAuth.getCurrentUser() != null) {
-            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            startActivity(new Intent(getApplicationContext(), Menu.class));
             finish();
         }
 
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(MainActivity.this, "Пользователь зарегестрирован", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            startActivity(new Intent(getApplicationContext(), Menu.class));
                         } else {
                             Toast.makeText(MainActivity.this, "Ошибка " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
 
